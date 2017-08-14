@@ -227,16 +227,16 @@
 <h2 id="seite-f-r-den-blog">Seite für den Blog</h2>
 <p>Erstellen Sie einen Unterordner in Ihrem <em>Portfolio</em>-Ordner namens <code>blog</code>. Kopieren Sie die Datei <code>index.html</code> in diesen Unterordner. Nun sollte Ihre Dateistruktur so aussehen:</p>
 <p><img src="/assets/library/html-css/part5/blog-subfolder.png" alt="Blog Unterordner"></p>
-<p>Öffnen Sie nun die kopierte Datei <code>blog/index.html</code> in Ihrem Browser (wenn Sie den Brackets-Editor verwenden, klicken Sie auf den Blitz für die <em>Live-Vorschau</em>). Nun werden Sie merken, dass zwei Dinge nicht funktionieren:</p>
+<p>Öffnen Sie nun die kopierte Datei <code>blog/index.html</code> in Ihrem Browser. Nun werden Sie merken, dass zwei Dinge nicht funktionieren:</p>
 <ol>
 <li>Das Bild wird nicht angezeigt.</li>
 <li>Die im CSS definierten Farben werden nicht übernommen.</li>
 </ol>
-<p>Da wir uns in einem Unterordner befinden, stimmt jetzt die URL (oder auch Pfad genannt) nicht mehr. Damit das Bild angezeigt würde, müssten wir für das <code>src</code>-Attribut anstatt <code>marco.jpg</code> nun <code>../marco.jpg</code> angeben. Aber wahrscheinlich wollen wir nicht schon wieder das gleiche Bild auf der Blogseite. Also können Sie das gesamte <code>img</code>-Element entfernen.</p>
-<p>Beim <strong>CSS</strong> ist es üblich, dass man die Regeln jeweils <strong>für das gesamte Projekt</strong> definiert. So ist es wichtig, dass wir die gleiche CSS-Datei auch in der Blogseite verwenden können. Dies erreichen wir, indem wir die URL ändern von <code>main.css</code> auf <code>../main.css</code>. So sieht jetzt das gesamte <code>link</code>-Element aus:</p>
+<p>Da wir uns in einem Unterordner befinden, stimmt jetzt die URL (oder auch Pfad genannt) nicht mehr. Damit das Bild angezeigt würde, müssten wir für das <code>src</code>-Attribut anstatt <code>marco.jpg</code> nun <code>../marco.jpg</code> oder <code>/marco.jpg</code> angeben. Aber wahrscheinlich wollen wir nicht schon wieder das gleiche Bild auf der Blogseite. Also können Sie das gesamte <code>img</code>-Element entfernen oder ein anderes Bild in den Blog-Ordner kopieren.</p>
+<p>Beim <strong>CSS</strong> ist es üblich, dass man die Regeln jeweils <strong>für das gesamte Projekt</strong> definiert. So ist es wichtig, dass wir die gleiche CSS-Datei auch in der Blogseite verwenden können. Dies erreichen wir, indem wir die URL ändern von <code>main.css</code> auf <code>/main.css</code>. Mit dem <code>/</code> springen wir in den Hauptordner zurück - egal, in welchem Unterordner wir uns gerade befinden. So sieht jetzt das gesamte <code>link</code>-Element aus:</p>
 <h5 id="blog-index-html">blog/index.html</h5>
 <pre class="prettyprint lang-html">
-&lt;link rel="stylesheet" href="../main.css">
+&lt;link rel="stylesheet" href="/main.css">
 </pre>
 
 <p>Diese Änderung sollte dazu führen, dass das Styling vom CSS auch für die Blogseite übernommen wird.</p>
@@ -248,7 +248,7 @@
 &lt;html>
   &lt;head>
     &lt;meta charset="utf-8">
-    &lt;link rel="stylesheet" href="../main.css">
+    &lt;link rel="stylesheet" href="/main.css">
     &lt;title>Blog - Web Portfolio von Marco&lt;/title>
   &lt;/head>
   &lt;body>
@@ -276,7 +276,7 @@
 &lt;html>
   &lt;head>
     &lt;meta charset="utf-8">
-    &lt;link rel="stylesheet" href="../../main.css">
+    &lt;link rel="stylesheet" href="/main.css">
     &lt;title>Erster Eintrag - Web Portfolio von Marco&lt;/title>
   &lt;/head>
   &lt;body>
@@ -329,7 +329,7 @@
 &lt;html>
   &lt;head>
     &lt;meta charset="utf-8">
-    &lt;link rel="stylesheet" href="../main.css">
+    &lt;link rel="stylesheet" href="/main.css">
     &lt;title>Projekte - Web Portfolio von Marco&lt;/title>
   &lt;/head>
   &lt;body>
@@ -356,7 +356,7 @@
 &lt;html>
   &lt;head>
     &lt;meta charset="utf-8">
-    &lt;link rel="stylesheet" href="../main.css">
+    &lt;link rel="stylesheet" href="/main.css">
     &lt;title>Kontakt - Web Portfolio von Marco&lt;/title>
   &lt;/head>
   &lt;body>
