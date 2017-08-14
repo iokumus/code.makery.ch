@@ -248,7 +248,7 @@
 &lt;head>
   &lt;meta charset="utf-8">
   <mark>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></mark>
-  &lt;link rel="stylesheet" href="main.css">
+  &lt;link rel="stylesheet" href="/main.css">
   &lt;title>Web Portfolio von Marco&lt;/title>
 &lt;/head>
 </pre>
@@ -281,10 +281,10 @@
 <pre class="prettyprint lang-html">
 &lt;body>
   &lt;ul>
-    &lt;li>&lt;a href="./">Home&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="blog/">Blog&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="projekte/">Projekte&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="kontakt/">Kontakt&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="/blog/">Blog&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="/projekte/">Projekte&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="/kontakt/">Kontakt&lt;/a>&lt;/li>
   &lt;/ul>
 
   <mark>&lt;div class="container"></mark>
@@ -322,7 +322,7 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 </li>
 <li><p>Umgeben Sie das Ganze mit einem weiteren <code>div</code>. Diesmal brauchen wir die drei Klassen <code>navbar</code>, <code>navbar-default</code> und <code>navbar-static-top</code>. Diese Klassen bewirken, dass ein Balken oben am Rand dargestellt wird. Vergessen Sie auch hier nicht das schliessende Tag <code>&lt;/div&gt;</code>.<br><code>&lt;div class="navbar navbar-default navbar-static-top"&gt;</code></p>
 </li>
-<li><p>Fügen Sie beim <code>li</code>-Elemente von <em>Home</em> eine Klasse <code>active</code> hinzu. Dies bewirkt, dass der <em>Home</em>-Link speziell hervorgehoben wird. Damit merkt der Besucher, auf welcher Seite er sich im Moment befindet.<br><code>&lt;li class="active"&gt;&lt;a href="./"&gt;Home&lt;/a&gt;&lt;/li&gt;</code></p>
+<li><p>Fügen Sie beim <code>li</code>-Elemente von <em>Home</em> eine Klasse <code>active</code> hinzu. Dies bewirkt, dass der <em>Home</em>-Link speziell hervorgehoben wird. Damit merkt der Besucher, auf welcher Seite er sich im Moment befindet.<br><code>&lt;li class="active"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;</code></p>
 </li>
 </ol>
 <p>So sieht der Code für die Navigation nun aus (achten Sie auf korrektes Einrücken!):</p>
@@ -331,10 +331,10 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 <mark>&lt;div class="navbar navbar-default navbar-static-top"></mark>
   <mark>&lt;div class="container"></mark>
     &lt;ul <mark>class="nav navbar-nav"></mark>
-      &lt;li <mark>class="active"</mark>>&lt;a href="./">Home&lt;/a>&lt;/li>
-      &lt;li>&lt;a href="blog/">Blog&lt;/a>&lt;/li>
-      &lt;li>&lt;a href="projekte/">Projekte&lt;/a>&lt;/li>
-      &lt;li>&lt;a href="kontakt/">Kontakt&lt;/a>&lt;/li>
+      &lt;li <mark>class="active"</mark>>&lt;a href="/">Home&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="/blog/">Blog&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="/projekte/">Projekte&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="/kontakt/">Kontakt&lt;/a>&lt;/li>
     &lt;/ul>
   <mark>&lt;/div></mark>
 <mark>&lt;/div></mark>
@@ -356,7 +356,7 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
   &lt;meta charset="utf-8">
   <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></mark>
   &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  &lt;link rel="stylesheet" href="main.css">
+  &lt;link rel="stylesheet" href="/main.css">
   &lt;title>Web Portfolio von Marco&lt;/title>
 &lt;/head>
 </pre>
@@ -386,10 +386,10 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 &lt;div class="navbar navbar-default navbar-static-top">
   &lt;div class="container">
     &lt;ul class="nav navbar-nav">
-      &lt;li>&lt;a <mark>href="../"</mark>>Home&lt;/a>&lt;/li>
-      &lt;li <mark>class="active"</mark>>&lt;a <mark>href="../blog/"</mark>>Blog&lt;/a>&lt;/li>
-      &lt;li>&lt;a <mark>href="../projekte/"</mark>>Projekte&lt;/a>&lt;/li>
-      &lt;li>&lt;a <mark>href="../kontakt/"</mark>>Kontakt&lt;/a>&lt;/li>
+      &lt;li>&lt;a <mark>href="/"</mark>>Home&lt;/a>&lt;/li>
+      &lt;li <mark>class="active"</mark>>&lt;a <mark>href="/blog/"</mark>>Blog&lt;/a>&lt;/li>
+      &lt;li>&lt;a <mark>href="/projekte/"</mark>>Projekte&lt;/a>&lt;/li>
+      &lt;li>&lt;a <mark>href="/kontakt/"</mark>>Kontakt&lt;/a>&lt;/li>
     &lt;/ul>
   &lt;/div>
 &lt;/div>
@@ -397,10 +397,7 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 
 <div class="alert alert-info">
 <p>
-<strong>Achtung:</strong> Links im Unterverzeichnis müssen mit <code>../</code> ergänzt werden, damit sie auf das übergeordnete Verzeichnis zeigen.
-</p>
-<p>
-Da die Blogeinträge noch ein Unterverzeichnis tiefer liegen, müssen die Links dort <code>../../</code> enthalten, um auf das oberste Verzeichnis zu zeigen.
+<strong>Achtung:</strong> Links im Unterverzeichnis müssen mit <code>/</code> ergänzt werden, damit sie auf den Hauptordner zeigen.
 </p>
 </div>
 
