@@ -224,7 +224,7 @@
 <p>Nun wechseln wir zur <code>index.html</code>-Datei und fügen innerhalb des <code>&lt;head&gt;</code>-Elements ein <code>&lt;link&gt;</code>-Element hinzu. Mit dem <code>&lt;link&gt;</code>-Element können wir der HTML-Seite mitteilen, dass sie die CSS-Datei laden soll:</p>
 <h5 id="link-von-html-zur-css-datei">Link von HTML zur CSS-Datei</h5>
 <pre class="prettyprint lang-html">
-&lt;link rel="stylesheet" href="main.css">
+&lt;link rel="stylesheet" href="/main.css">
 </pre>
 
 <p>Fügen Sie dieses Element im <code>&lt;head&gt;</code>-Bereich ein. Dann sollte Ihr Code etwa so aussehen:</p>
@@ -234,7 +234,7 @@
 &lt;html>
   &lt;head>
     &lt;meta charset="utf-8">
-    <mark>&lt;link rel="stylesheet" href="main.css"></mark>
+    <mark>&lt;link rel="stylesheet" href="/main.css"></mark>
     &lt;title>Web Portfolio von Marco&lt;/title>
   &lt;/head>
   &lt;body>
@@ -254,7 +254,7 @@
 </pre>
 
 <div class="alert alert-info">
-<strong>Wichtig:</strong> Damit das CSS gefunden wird, muss das <code>href</code>-Attribut genau auf die Datei verweisen. Das heisst auch, falls die Datei in einem Unterordner liegen würde, müsste dieser auch angegeben werden, also zum Beispiel <code>href="unterordner/main.css"</code>. Mehr dazu siehe unter <a class="alert-link" href="/library/html-css/de/part1/#relative-und-absolute-urls">relative und absolute URLs</a>.
+<strong>Wichtig:</strong> Damit das CSS gefunden wird, muss das <code>href</code>-Attribut genau auf die Datei verweisen. Wir haben nur eine <code>main.css</code> und diese liegt in unserem Hauptordner. Mit dem führenden <code>/</code> gelangen wir von überall her, auch von Unterordnern, zum Hauptordner und erreichen so unter <code>href="/main.css"</code> immer unsere CSS-Datei. Mehr dazu siehe unter <a class="alert-link" href="/library/html-css/de/part1/#relative-und-absolute-urls">relative und absolute URLs</a>.
 </div>
 
 
@@ -356,6 +356,7 @@ p {
 </pre>
 
 <p>In diesem HTML würde die CSS-Regel auf das erste und das dritte <code>p</code>-Element angewandt werden. Wie sie sehen, ist es auch möglich, dass ein Element mehrere Klassen besitzt (<code>highlight</code> und <code>new</code>).</p>
+<!--
 <h3 id="id-selektor">ID-Selektor</h3>
 <p>Der ID-Selektor ist sehr ähnlich wie der Klassenselektor. Er wird auf alle HTML-Elemente angewandt, die ein Attribut <code>id</code> mit einem entsprechenden Wert haben. Anstelle des Punktes verwendet man für ID-Selektoren ein <strong>Rautezeichen</strong> (<code>#</code>).</p>
 <p>Der wichtige Unterschied zum Klassenselektor besteht darin, dass ID-Selektoren <strong>nur einmal</strong> pro HTML-Seite vorkommen sollten, während eine Klasse für beliebig viele Elemente verwendet werden kann.</p>
@@ -397,7 +398,7 @@ p a {
 <div class="alert alert-info">
 <strong>Hinweis:</strong> Das <code>a</code>-Element muss nicht unbedingt direkt dem <code>p</code>-Element untergeordnet sein. Der Nachkommenselektor trifft auf irgend ein <em>Nachkomme</em> zu. Für den anderen Fall gibt es den Kindselektor (<code>&gt;</code>), auf den ich jedoch hier nicht eingehen werde.
 </div>
-
+-->
 
 <h2 id="css-eigenschaften">CSS-Eigenschaften</h2>
 <p>Durch CSS-Regeln wird festgelegt, wie HTML-Elemente angezeigt werden sollen. Es gibt zahlreiche Eigenschaften, die in CSS definiert werden können. Zwei davon haben wir bereits kennen gelernt, <code>background-color</code> und <code>color</code>.</p>
