@@ -1,47 +1,47 @@
 ---
 layout: article
-title: "JavaFX 8 Tutorial - Part 4: CSS Styling"
+title: "JavaFX 8 Tutorial - 4. Kısım: CSS Biçimlendirme"
 date: 2014-04-25 00:00
 updated: 2015-05-16 00:00
 slug: javafx-8-tutorial/tr/part4
 canonical: /library/javafx-8-tutorial/part4/
 github: https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/javafx-8-tutorial-tr-part4.md
-description: "In JavaFX you can style your user interface using CSS. We'll also add an application icon in this tutorial part."
+description: "JavaFX te kullanıcı arayüzünü CSS kullanarak biçimlendirebilirsiniz. Tutorail ın bu kısmında uygulama ikonu da ekleyeceğiz."
 image: /assets/library/javafx-8-tutorial/part4/addressapp-part4.png
 published: true
 prettify: true
 comments: true
 sidebars:
-- header: "Articles in this Series"
+- header: "Bu serideki makaleler"
   body:
-  - text: "Introduction"
+  - text: "Giriş"
     link: /library/javafx-8-tutorial/tr/
     paging: Intro
-  - text: "Part 1: Scene Builder"
+  - text: "Kısım 1: Scene Builder"
     link: /library/javafx-8-tutorial/tr/part1/
     paging: 1
-  - text: "Part 2: Model and TableView"
+  - text: "Kısım 2: Model and TableView"
     link: /library/javafx-8-tutorial/tr/part2/
     paging: 2
-  - text: "Part 3: Interacting with the User"
+  - text: "Kısım 3: Kullanıcı ile Etkileşim"
     link: /library/javafx-8-tutorial/tr/part3/
     paging: 3
-  - text: "Part 4: CSS Styling"
+  - text: "Kısım 4: CSS Biçimlendirme"
     link: /library/javafx-8-tutorial/tr/part4/
     paging: 4
     active: true
-  - text: "Part 5: Storing Data as XML"
+  - text: "Kısım 5: Veriyi XML olarak saklama"
     link: /library/javafx-8-tutorial/tr/part5/
     paging: 5
-  - text: "Part 6: Statistics Chart"
+  - text: "Kısım 6: İstatistik Grafiği"
     link: /library/javafx-8-tutorial/tr/part6/
     paging: 6
-  - text: "Part 7: Deployment"
+  - text: "Kısım 7: Yayınlama"
     link: /library/javafx-8-tutorial/tr/part7/
     paging: 7
-- header: "Download Sources"
+- header: "Kaynakları İndirin"
   body:
-  - text: Part 4 as Eclipse Project <em>(requires at least JDK 8u40)</em>
+  - text: Eclipse Projesi olarak Kısım 4 <em>(en düşük JDK 8u40 gerektirir)</em>
     link: https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-4.zip
     icon-css: fa fa-fw fa-download
 languages: 
@@ -59,9 +59,9 @@ languages:
 ![Screenshot AddressApp Part 4](/assets/library/javafx-8-tutorial/part4/addressapp-part4.png)
 
 
-## Topics in Part 4
+## Kısım 4 teki Başlıklar
 
-* **CSS Styling**
+* **CSS Biçimlendirme**
 * Adding an **Application Icon**
 
 
@@ -69,39 +69,39 @@ languages:
 *****
 
 
-## CSS Styling 
+## CSS Biçimlendirme 
 
-In JavaFX you can style your user interface using Cascading Style Sheets (CSS). This is great! It's never been as easy to customize the appearance of a Java application.
+JavaFX te kullanıcı arayüzünü Kaskat Stil Sayfaları ile (CSS) biçimlendirebilirsiniz. Bu harika birşey! Java uygulamalarının görünümünü özelleştirmek hiç bu kadar kolay olmamıştı.
 
-In this tutorial we will create a *DarkTheme* inspired by the Windows 8 Metro design. The css for the buttons is based on the blog post [JMetro - Windows 8 Metro controls on Java](http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/) by Pedro Duque Vieira.
+Bu derste Windows 8 Metro tasarımından ilham alınmış olan bir *DarkTheme* oluşturacağız. Düğmeler için css Pedro Duque Vieira nın blogunu temel almıştır [JMetro - Windows 8 Metro controls on Java](http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/).
 
 
-### Getting Familiar with CSS
+### CSS ye aşina olma
 
-If you want to style your JavaFX application you should have a basic understanding of CSS in general. A good place to start is this [CSS tutorial](http://www.csstutorial.net/).
+JavaFX uygulamanızı biçimlendirmek istiyorsanız CSS hakkında temel bir bilginiz olması gerekir. Başlangıç için iyi bir nokta: [CSS tutorial](http://www.csstutorial.net/).
 
-For more JavaFX specific information about CSS:
+CSS hakkında daha detaylı JavaFX bilgisi:
 
 * [Skinning JavaFX Applications with CSS](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/css_tutorial.htm) - Tutorial by Oracle
 * [JavaFX CSS Reference](http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html) - Official Reference
 
 
-### Default JavaFX CSS
+### Varsayılan JavaFX CSS
 
-The default source for CSS styles in JavaFX 8 is a file called **`modena.css`**. This css file can be found in the Java FX jar file `jfxrt.jar` located in your Java folder under `/jdk1.8.x/jre/lib/ext/jfxrt.jar`.
+JavaFX 8 deki CSS biçimleri için varsayılan kaynak **`modena.css`** isimli dosyadır. Bu css dosyası Java klasörünüz içerisinde `/jdk1.8.x/jre/lib/ext/jfxrt.jar` bulunan `jfxrt.jar` Java FX jar dosyasıdır. 
 
-Unzip the `jfxrt.jar`. You should find the `modena.css` under `com/sun/javafx/scene/control/skin/modena/`
+`jfxrt.jar` dosyasını çıkartın. `modena.css` dosyasını `com/sun/javafx/scene/control/skin/modena/` altında bulabilirsiniz.
 
-This default style sheet is always applied to a JavaFX application. By adding a custom style sheet we can override the default styles of the `modena.css`.   
+Bu varsayılan biçimlendirme dosyası her zaman Java FX uygulamalarına uygulanır. Özel bir biçimlendirme sayfası ekleyerek `modena.css` deki varsayılan biçimleri geçersiz kılabiliriz.   
 
 <div class="alert alert-info">
-**Hint:** It helps to look at the default CSS file to see which styles you might need to override.
+**İpucu:** Varsayılan CSS dosyasına gözatmak hangi biçimleri değiştirmeniz gerektiği konusunda fikir verebilir.
 </div>
 
 
-### Attaching CSS Style Sheets
+### CSS Biçim Sayfalarını Eklemek
 
-Add the following CSS file called `DarkTheme.css` to the *view* package.
+Aşağıdaki `DarkTheme.css` ismindeki CSS dosyasını *view* paketine ekleyin.
 
 
 ##### DarkTheme.css
@@ -252,25 +252,25 @@ Add the following CSS file called `DarkTheme.css` to the *view* package.
 }
 </pre>
 
-We now need to attach the CSS to our Scene. We could do this programmatically in Java code, but we'll use the Scene Builder to add it to our fxml files: 
+Şimdi CSS yi Scene e eklememiz gerekli. Bu işi Java koduyla program olarak yapabiliriz ancak fxml dosyalarımıza eklemek için biz Scene Builder kullanacağız: 
 
 
-#### Attach CSS to RootLayout.fxml
+#### CSS yi RootLayout.fxml e ekle
 
-1. Open the file `RootLayout.fxml` in Scene Builder. 
+1. `RootLayout.fxml` dosyasını Scene Builder da açın. 
 
-2. Select the root `BorderPane` in the Hierarchy view. Under *Properties* group add the `DarkTheme.css` file as stylesheet.   
+2. Hierarchy görünümünde `BorderPane` kökünü seçin. Under *Properties* grup altında stylesheet olarak `DarkTheme.css` dosyasını ekleyin.   
 ![DarkTheme for RootLayout](/assets/library/javafx-8-tutorial/part4/darktheme-rootlayout.png)
 
 
-#### Attach CSS to PersonEditDialog.fxml
+#### CS yi PersonEditDialog.fxml e ekle
 
-1. Open the file `PersonEditDialog.fxml` in Scene Builder. Select the root `AnchorPane` and choose `DarkTheme.css` in the *Properties* group as stylesheet.
+1. `PersonEditDialog.fxml` dosyasını Scene Builder da açın. `AnchorPane` kökünü seçin ve *Properties* groupta stylesheet olarak `DarkTheme.css` dosyasını seçin.
 
-2. The background is still white, so add the Style Class `background` to the root `AnchorPane`.   
+2. Arkaplan hala beyaz, bu yüzden `AnchorPane` `background` Style Class ekleyin. 
 ![Add Style Class](/assets/library/javafx-8-tutorial/part4/darktheme-personeditdialog.png)
 
-3. Select the OK button and choose *Default Button* in the Properties View. This will change its color and make this the default button when the *enter* key is pressed by the user.
+3. OK düğmesini seçin ve Properties görünümünde *Default Button* seçin. Bu rengini değiştirecektir ve kullanıcı tarafından *enter* tuşuna basıldığında varsayılan düğme yapacaktır.
 
 
 #### Attach CSS to PersonOverview.fxml
