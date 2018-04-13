@@ -1,30 +1,30 @@
 ---
 layout: article
-title: "JavaFX 8 Tutorial - Part 1: Scene Builder"
+title: "JavaFX 8 Tutorial - Kısım 1: Scene Builder"
 date: 2014-04-19 01:00
 updated: 2015-05-16 00:00
 slug: javafx-8-tutorial/tr/part1
 canonical: /library/javafx-8-tutorial/part1/
 github: https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/javafx-8-tutorial-tr-part1.md
-description: "Learn how to set up a JavaFX project. This is part one of a seven-part tutorial about designing, programming and deploying an address application with JavaFX."
+description: "JavaFX projesinin nasıl oluşturulacağını öğrenin. Bu yedi kısımdan oluşan ve JavaFX ile bir adres uygulamasının tasarımı, programlaması ve yayımlanmasını içeren tutorialın bir parçasıdır."
 image: /assets/library/javafx-8-tutorial/part1/addressapp-part1.png
 published: true
 prettify: true
 comments: true
 sidebars:
-- header: "Articles in this Series"
+- header: "Bu serideki makaleler:"
   body:
-  - text: "Introduction"
+  - text: "Giriş"
     link: /library/javafx-8-tutorial/tr/
     paging: Intro
   - text: "Part 1: Scene Builder"
     link: /library/javafx-8-tutorial/tr/part1/
     paging: 1
     active: true
-  - text: "Part 2: Model and TableView"
+  - text: "Part 2: Model ve TableView"
     link: /library/javafx-8-tutorial/tr/part2/
     paging: 2
-  - text: "Part 3: Interacting with the User"
+  - text: "Part 3: Kullanıcı ile etkileşiö"
     link: /library/javafx-8-tutorial/tr/part3/
     paging: 3
   - text: "Part 4: CSS Styling"
